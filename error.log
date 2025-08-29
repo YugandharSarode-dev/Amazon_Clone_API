@@ -1,0 +1,9 @@
+2025-08-29 09:17:59,654 [WARNING] django.request: Bad Request: /api/v1/addtocart/
+2025-08-29 09:18:09,076 [WARNING] django.request: Bad Request: /api/v1/addtocart/
+2025-08-29 09:55:31,689 [WARNING] django.request: Unauthorized: /api/v1/listcart/
+2025-08-29 10:10:43,881 [ERROR] django.request: Internal Server Error: /api/v1/addtocart/
+2025-08-29 10:59:37,890 [ERROR] django.request: Internal Server Error: /api/v1/createorder/
+2025-08-29 11:07:54,679 [ERROR] django.request: Internal Server Error: /api/v1/createorder/
+2025-08-29 11:08:16,720 [ERROR] django.request: Internal Server Error: /api/v1/createorder/
+2025-08-29 11:08:47,001 [ERROR] django.request: Internal Server Error: /api/v1/createorder/
+2025-08-29 11:09:40,349 [ERROR] django.request: Internal Server Error: /api/v1/createorder/
