@@ -10,3 +10,6 @@ def is_superuser(user):
 
 def is_staff(user):
     return user.role == 2
+
+def is_provider(user):
+    return user.role ==3

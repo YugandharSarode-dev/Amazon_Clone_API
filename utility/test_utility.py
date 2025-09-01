@@ -5,7 +5,7 @@ import django.utils.timezone
 from django.utils.timezone import timedelta
 import random
 import string
-from faker import Faker
+from faker import Faker 
 from oauthlib.common import generate_token
 from django.conf import settings
 from store.models import *

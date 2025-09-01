@@ -1,5 +1,6 @@
 from django.db import models
 from store.model.category_model import Categories
+from store.model.users import User
 
 class Product(models.Model):
     name = models.CharField(max_length=150)
@@ -9,6 +10,8 @@ class Product(models.Model):
     stock = models.PositiveIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    created_by = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
+
 
     class Meta:
         db_table = 'product'

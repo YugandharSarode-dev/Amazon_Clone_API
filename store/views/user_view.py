@@ -5,6 +5,7 @@ from utility.response import ApiResponse
 from utility.utils import MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, get_serielizer_error
 from store.model.users import User
 from store.serializers.user_serializer import UserSerializer
+from utility.role import is_superuser
 
 ''' swagger '''
 from ..swagger.user_swagger import (
@@ -21,7 +22,7 @@ class UserView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRespon
     authentication_classes = [OAuth2Authentication]
     permission_classes = [IsAuthenticated]
 
-    def get_permissions(self):   #This will allow anyone to register user
+    def get_permissions(self):   # This allows anyone to register user
         if self.action == 'create':
             return [AllowAny()]
         return super().get_permissions()
@@ -43,7 +44,10 @@ class UserView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRespon
         try:
             req_data = request.data.copy()
             password = req_data.get("password")
-
+            
+            role = req_data.get('role')
+            req_data['role'] = role
+            
             serializer = self.serializer_class(data=req_data)
             if serializer.is_valid():
                 user = serializer.save()
@@ -65,7 +69,6 @@ class UserView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRespon
         except Exception as e:
             transaction.savepoint_rollback(sp1)
             return ApiResponse.response_internal_server_error(self, message=[str(e)])
-
 
     @swagger_auto_schema_update
     @transaction.atomic()
@@ -128,12 +131,12 @@ class UserView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRespon
             return ApiResponse.response_internal_server_error(self, message=[str(e)])
 
     def transform_single(self, instance):
-        """Prepare user response"""
         return {
             'user_id': instance.id,
             'username': instance.username,
             'first_name': instance.first_name,
             'last_name': instance.last_name,
             'email': instance.email,
-            'mobile': instance.mobile
+            'mobile': instance.mobile,
+            'role': instance.role   
         }

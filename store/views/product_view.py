@@ -1,14 +1,14 @@
 from django.db import transaction
-from django.db.models import F, Q
+from django.db.models import Q
 from rest_framework.permissions import IsAuthenticated
 from oauth2_provider.contrib.rest_framework import OAuth2Authentication
 from utility.response import ApiResponse
 from utility.utils import MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, get_pagination_resp, get_serielizer_error
 from store.model.product_model import Product
 from store.serializers.product_serializer import ProductSerializer
-from utility.role import is_superuser
+from utility.role import is_superuser, is_provider
 
-''' swagger '''
+# swagger imports
 from ..swagger.product_swagger import (
     swagger_auto_schema_list, swagger_auto_schema_post,
     swagger_auto_schema_update, swagger_auto_schema_delete,
@@ -32,18 +32,31 @@ class ProductView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRes
         except:
             return None
 
-    def _check_permission(self, user):
-        return is_superuser(user)
+    def _check_permission(self, user, instance=None, action='create'):
+        if is_superuser(user):
+            return True
+
+        if is_provider(user):
+            if action == 'create':
+                return True
+            if instance and instance.created_by_id == user.id:
+                return True
+
+        return False
 
     @swagger_auto_schema_post
     @transaction.atomic()
     def create(self, request, *args, **kwargs):
-        if not self._check_permission(request.user):
+        if not self._check_permission(request.user, action='create'):
             return ApiResponse.response_unauthorized(self, message='You do not have permission to add product.')
 
         sp1 = transaction.savepoint()
         try:
             req_data = request.data.copy()
+
+            # Set creator automatically
+            req_data['created_by'] = request.user.id
+
             serializer = self.serializer_class(data=req_data)
             if serializer.is_valid():
                 product = serializer.save()
@@ -65,24 +78,20 @@ class ProductView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRes
     @swagger_auto_schema_update
     @transaction.atomic()
     def update(self, request, *args, **kwargs):
-        if not self._check_permission(request.user):
+        instance = self.get_object()
+        if not instance:
+            return ApiResponse.response_not_found(self, message=self.singular_name + ' not found.')
+
+        if not self._check_permission(request.user, instance=instance, action='update'):
             return ApiResponse.response_unauthorized(self, message='You do not have permission to update product.')
 
         sp1 = transaction.savepoint()
         try:
-            instance = self.get_object()
-            if not instance:
-                return ApiResponse.response_not_found(self, message=self.singular_name + ' not found.')
-
             serializer = self.serializer_class(instance, data=request.data, partial=True)
             if serializer.is_valid():
                 serializer.save()
                 transaction.savepoint_commit(sp1)
-                return ApiResponse.response_ok(
-                    self,
-                    data=serializer.data,
-                    message=self.singular_name + ' updated successfully.'
-                )
+                return ApiResponse.response_ok(self, data=serializer.data, message=self.singular_name + ' updated successfully.')
 
             error_resp = get_serielizer_error(serializer)
             transaction.savepoint_rollback(sp1)
@@ -107,23 +116,22 @@ class ProductView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRes
 
     @swagger_auto_schema_list
     def list(self, request, *args, **kwargs):
-        """List all Products with filtering, search, sorting, and pagination"""
         try:
             query_params = request.query_params
             queryset = self.model_class.all()
 
+            # Provider sees only their products
+            if is_provider(request.user):
+                queryset = queryset.filter(created_by_id=request.user.id)
+
             keyword = query_params.get('keyword')
             if keyword:
-                queryset = queryset.filter(
-                    Q(name__icontains=keyword) | Q(description__icontains=keyword)
-                )
+                queryset = queryset.filter(Q(name__icontains=keyword) | Q(description__icontains=keyword))
 
-            # Category filter
             category_id = query_params.get('category')
             if category_id:
                 queryset = queryset.filter(category_id=category_id)
 
-            # Price range filter
             min_price = query_params.get('min_price')
             max_price = query_params.get('max_price')
             if min_price:
@@ -131,15 +139,12 @@ class ProductView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRes
             if max_price:
                 queryset = queryset.filter(price__lte=max_price)
 
-            # Sorting
             sort_by = query_params.get('sort_by') or 'id'
             if query_params.get('sort_direction') == 'descending':
                 sort_by = '-' + sort_by
             queryset = queryset.order_by(sort_by)
 
             response_data = [self.transform_single(obj) for obj in queryset]
-
-            # Pagination
             paginated_data = get_pagination_resp(response_data, request)
             return ApiResponse.response_ok(self, data=paginated_data)
 
@@ -148,14 +153,14 @@ class ProductView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRes
 
     @swagger_auto_schema_delete
     def delete(self, request, *args, **kwargs):
-        if not self._check_permission(request.user):
+        instance = self.get_object()
+        if not instance:
+            return ApiResponse.response_not_found(self, message=self.singular_name + ' not found.')
+
+        if not self._check_permission(request.user, instance=instance, action='delete'):
             return ApiResponse.response_unauthorized(self, message='You do not have permission to delete product.')
 
         try:
-            instance = self.get_object()
-            if not instance:
-                return ApiResponse.response_not_found(self, message=self.singular_name + ' not found.')
-
             instance.delete()
             return ApiResponse.response_ok(self, message=self.singular_name + ' deleted.')
 
@@ -170,6 +175,7 @@ class ProductView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRes
             'price': instance.price,
             'stock': instance.stock,
             'category': instance.category.name,
+            'created_by': instance.created_by.username,
             'created_at': instance.created_at,
             'updated_at': instance.updated_at
         }

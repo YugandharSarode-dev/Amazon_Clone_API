@@ -36,3 +36,9 @@
 2025-09-01 10:38:06,925 [WARNING] django.request: Forbidden: /api/v1/registercat/
 2025-09-01 10:41:46,776 [WARNING] django.request: Forbidden: /api/v1/registercat/
 2025-09-01 10:50:43,896 [WARNING] django.request: Forbidden: /api/v1/registercat/
+2025-09-01 11:51:49,394 [WARNING] django.request: Forbidden: /api/v1/login/
+2025-09-01 11:52:03,848 [WARNING] django.request: Forbidden: /api/v1/login/
+2025-09-01 11:52:20,765 [WARNING] django.request: Forbidden: /api/v1/login/
+2025-09-01 11:57:06,535 [ERROR] django.request: Internal Server Error: /api/v1/listproduct/
+2025-09-01 11:58:10,253 [ERROR] django.request: Internal Server Error: /api/v1/listproduct/
+2025-09-01 12:19:50,665 [WARNING] django.request: Forbidden: /api/v1/login/
