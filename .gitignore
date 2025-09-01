@@ -1,0 +1,67 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.so
+
+# Django specific
+*.log
+*.sqlite3
+db.sqlite3
+*.pot
+*.pyc
+*.pyo
+*.db
+*.db-journal
+
+# Virtual environment
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Django static files
+static/
+media/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+
+# PyCharm
+.idea/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# mypy
+.mypy_cache/
+
+# pytest
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Pytest
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+

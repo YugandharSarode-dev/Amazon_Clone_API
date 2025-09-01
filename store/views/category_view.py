@@ -6,6 +6,8 @@ from utility.utils import MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet
 from store.model.category_model import Categories
 from store.serializers.category_serializer import CategorySerializer
 
+''' swagger '''
+from ..swagger.category_swagger import swagger_auto_schema_list, swagger_auto_schema_post, swagger_auto_schema, swagger_auto_schema_update, swagger_auto_schema_delete
 
 class CategoryView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiResponse):
     serializer_class = CategorySerializer
@@ -23,6 +25,7 @@ class CategoryView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRe
         except:
             return None
 
+    @swagger_auto_schema_post
     @transaction.atomic()
     def create(self, request, *args, **kwargs):
         sp1 = transaction.savepoint()
@@ -46,6 +49,7 @@ class CategoryView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRe
             transaction.savepoint_rollback(sp1)
             return ApiResponse.response_internal_server_error(self, message=[str(e)])
 
+    @swagger_auto_schema_update
     @transaction.atomic()
     def update(self, request, *args, **kwargs):
         sp1 = transaction.savepoint()
@@ -72,6 +76,7 @@ class CategoryView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRe
             transaction.savepoint_rollback(sp1)
             return ApiResponse.response_internal_server_error(self, message=[str(e)])
 
+    @swagger_auto_schema
     def retrieve(self, request, *args, **kwargs):
         try:
             instance = self.get_object()
@@ -84,6 +89,7 @@ class CategoryView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRe
         except Exception as e:
             return ApiResponse.response_internal_server_error(self, message=[str(e)])
 
+    @swagger_auto_schema_list
     def list(self, request, *args, **kwargs):
         try:
             queryset = self.model_class.all()
@@ -93,6 +99,7 @@ class CategoryView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRe
         except Exception as e:
             return ApiResponse.response_internal_server_error(self, message=[str(e)])
 
+    @swagger_auto_schema_delete
     def delete(self, request, *args, **kwargs):
         try:
             instance = self.get_object()

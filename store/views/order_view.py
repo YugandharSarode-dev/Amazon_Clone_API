@@ -10,6 +10,9 @@ from store.serializers.order_serializer import OrderSerializer
 from store.model.cart_model import Cart
 from store.model.product_model import Product
 
+''' swagger '''
+from ..swagger.order_swagger import swagger_auto_schema_post
+
 class OrderView(CreateRetrieveUpdateViewSet, ApiResponse):
     serializer_class = OrderSerializer
     singular_name = 'Order'
@@ -17,6 +20,7 @@ class OrderView(CreateRetrieveUpdateViewSet, ApiResponse):
     authentication_classes = [OAuth2Authentication]
     permission_classes = [IsAuthenticated]
 
+    @swagger_auto_schema_post
     def create(self, request, *args, **kwargs):
         try:
 
@@ -26,7 +30,6 @@ class OrderView(CreateRetrieveUpdateViewSet, ApiResponse):
 
             total_amount = 0
             order_items_data = []
-
 
             for cart in cart_rows:
                 for p in cart.products:  
@@ -44,23 +47,22 @@ class OrderView(CreateRetrieveUpdateViewSet, ApiResponse):
                     total_amount += product.price * quantity
                     order_items_data.append({'product': product, 'quantity': quantity})
 
-        
             order = Order.objects.create(
                 user=request.user,
-                total_amount=total_amount)
+                total_amount=total_amount
+            )
 
             for item in order_items_data:
                 OrderItem.objects.create(
                     order=order,
                     product=item['product'],
                     quantity=item['quantity'],
-                    price = item['product'].price
+                    price=item['product'].price
                 )
-                
+
                 Product.objects.filter(id=item['product'].id).update(
                     stock=F('stock') - item['quantity']
                 )
-
 
             cart_rows.delete()
 
@@ -69,3 +71,4 @@ class OrderView(CreateRetrieveUpdateViewSet, ApiResponse):
 
         except Exception as e:
             return ApiResponse.response_internal_server_error(self, message=[str(e)])
+

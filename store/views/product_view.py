@@ -1,11 +1,19 @@
 from django.db import transaction
-from oauth2_provider.contrib.rest_framework import OAuth2Authentication
+from django.db.models import F, Q
 from rest_framework.permissions import IsAuthenticated
+from oauth2_provider.contrib.rest_framework import OAuth2Authentication
 from utility.response import ApiResponse
-from utility.utils import MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, get_serielizer_error
+from utility.utils import MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, get_pagination_resp, get_serielizer_error
 from store.model.product_model import Product
 from store.serializers.product_serializer import ProductSerializer
 from utility.role import is_superuser
+
+''' swagger '''
+from ..swagger.product_swagger import (
+    swagger_auto_schema_list, swagger_auto_schema_post,
+    swagger_auto_schema_update, swagger_auto_schema_delete,
+    swagger_auto_schema
+)
 
 
 class ProductView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiResponse):
@@ -25,8 +33,9 @@ class ProductView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRes
             return None
 
     def _check_permission(self, user):
-        return is_superuser(user)  
+        return is_superuser(user)
 
+    @swagger_auto_schema_post
     @transaction.atomic()
     def create(self, request, *args, **kwargs):
         if not self._check_permission(request.user):
@@ -39,7 +48,11 @@ class ProductView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRes
             if serializer.is_valid():
                 product = serializer.save()
                 transaction.savepoint_commit(sp1)
-                return ApiResponse.response_created(self, data=self.serializer_class(product).data, message=self.singular_name + ' created successfully.')
+                return ApiResponse.response_created(
+                    self,
+                    data=self.serializer_class(product).data,
+                    message=self.singular_name + ' created successfully.'
+                )
 
             error_resp = get_serielizer_error(serializer)
             transaction.savepoint_rollback(sp1)
@@ -49,6 +62,7 @@ class ProductView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRes
             transaction.savepoint_rollback(sp1)
             return ApiResponse.response_internal_server_error(self, message=[str(e)])
 
+    @swagger_auto_schema_update
     @transaction.atomic()
     def update(self, request, *args, **kwargs):
         if not self._check_permission(request.user):
@@ -64,7 +78,11 @@ class ProductView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRes
             if serializer.is_valid():
                 serializer.save()
                 transaction.savepoint_commit(sp1)
-                return ApiResponse.response_ok(self, data=serializer.data, message=self.singular_name + ' updated successfully.')
+                return ApiResponse.response_ok(
+                    self,
+                    data=serializer.data,
+                    message=self.singular_name + ' updated successfully.'
+                )
 
             error_resp = get_serielizer_error(serializer)
             transaction.savepoint_rollback(sp1)
@@ -74,6 +92,7 @@ class ProductView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRes
             transaction.savepoint_rollback(sp1)
             return ApiResponse.response_internal_server_error(self, message=[str(e)])
 
+    @swagger_auto_schema
     def retrieve(self, request, *args, **kwargs):
         try:
             instance = self.get_object()
@@ -86,15 +105,48 @@ class ProductView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRes
         except Exception as e:
             return ApiResponse.response_internal_server_error(self, message=[str(e)])
 
+    @swagger_auto_schema_list
     def list(self, request, *args, **kwargs):
+        """List all Products with filtering, search, sorting, and pagination"""
         try:
+            query_params = request.query_params
             queryset = self.model_class.all()
-            resp_list = [self.transform_single(item) for item in queryset]
-            return ApiResponse.response_ok(self, data=resp_list)
+
+            keyword = query_params.get('keyword')
+            if keyword:
+                queryset = queryset.filter(
+                    Q(name__icontains=keyword) | Q(description__icontains=keyword)
+                )
+
+            # Category filter
+            category_id = query_params.get('category')
+            if category_id:
+                queryset = queryset.filter(category_id=category_id)
+
+            # Price range filter
+            min_price = query_params.get('min_price')
+            max_price = query_params.get('max_price')
+            if min_price:
+                queryset = queryset.filter(price__gte=min_price)
+            if max_price:
+                queryset = queryset.filter(price__lte=max_price)
+
+            # Sorting
+            sort_by = query_params.get('sort_by') or 'id'
+            if query_params.get('sort_direction') == 'descending':
+                sort_by = '-' + sort_by
+            queryset = queryset.order_by(sort_by)
+
+            response_data = [self.transform_single(obj) for obj in queryset]
+
+            # Pagination
+            paginated_data = get_pagination_resp(response_data, request)
+            return ApiResponse.response_ok(self, data=paginated_data)
 
         except Exception as e:
             return ApiResponse.response_internal_server_error(self, message=[str(e)])
 
+    @swagger_auto_schema_delete
     def delete(self, request, *args, **kwargs):
         if not self._check_permission(request.user):
             return ApiResponse.response_unauthorized(self, message='You do not have permission to delete product.')

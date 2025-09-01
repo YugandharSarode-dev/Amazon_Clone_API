@@ -1,17 +1,30 @@
 from django.db import transaction
 from oauth2_provider.contrib.rest_framework import OAuth2Authentication
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny
 from utility.response import ApiResponse
 from utility.utils import MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, get_serielizer_error
 from store.model.users import User
 from store.serializers.user_serializer import UserSerializer
+
+''' swagger '''
+from ..swagger.user_swagger import (
+    swagger_auto_schema_list, swagger_auto_schema_post,
+    swagger_auto_schema_update, swagger_auto_schema_delete,
+    swagger_auto_schema
+)
+
 
 class UserView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiResponse):
     serializer_class = UserSerializer
     singular_name = 'User'
     model_class = User.objects
     authentication_classes = [OAuth2Authentication]
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
+
+    def get_permissions(self):   #This will allow anyone to register user
+        if self.action == 'create':
+            return [AllowAny()]
+        return super().get_permissions()
 
     search_fields = ['username', 'first_name', 'last_name', 'email']
 
@@ -22,6 +35,7 @@ class UserView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRespon
         except:
             return None
 
+    @swagger_auto_schema_post
     @transaction.atomic()
     def create(self, request, *args, **kwargs):
         """Register a new User"""
@@ -52,6 +66,8 @@ class UserView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRespon
             transaction.savepoint_rollback(sp1)
             return ApiResponse.response_internal_server_error(self, message=[str(e)])
 
+
+    @swagger_auto_schema_update
     @transaction.atomic()
     def update(self, request, *args, **kwargs):
         """Update logged-in User"""
@@ -77,6 +93,7 @@ class UserView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRespon
             transaction.savepoint_rollback(sp1)
             return ApiResponse.response_internal_server_error(self, message=[str(e)])
 
+    @swagger_auto_schema
     def retrieve(self, request, *args, **kwargs):
         """Get logged-in User by ID"""
         try:
@@ -90,6 +107,7 @@ class UserView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRespon
         except Exception as e:
             return ApiResponse.response_internal_server_error(self, message=[str(e)])
 
+    @swagger_auto_schema_list
     def list(self, request, *args, **kwargs):
         """List only logged-in user's details"""
         try:
@@ -99,6 +117,7 @@ class UserView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRespon
         except Exception as e:
             return ApiResponse.response_internal_server_error(self, message=[str(e)])
 
+    @swagger_auto_schema_delete
     def delete(self, request, *args, **kwargs):
         """Delete logged-in User"""
         try:

@@ -1187,3 +1187,738 @@
                 AND pg_catalog.pg_table_is_visible(c.oid)
         ; args=None; alias=default
 2025-08-29 11:47:33,725 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 05:09:44,964 [DEBUG] django.db.backends: (0.022) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 05:09:44,969 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 05:28:14,180 [DEBUG] django.db.backends: (0.005) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 05:28:14,186 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 05:31:12,893 [DEBUG] django.db.backends: (0.003) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 05:31:12,900 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 05:31:25,985 [DEBUG] django.db.backends: (0.004) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 05:31:25,989 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 05:32:36,876 [DEBUG] django.db.backends: (0.002) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 05:32:36,880 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 05:32:40,535 [DEBUG] django.db.backends: (0.004) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 05:32:40,547 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 05:33:43,167 [DEBUG] django.db.backends: (0.002) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 05:33:43,173 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 05:36:34,125 [DEBUG] django.db.backends: (0.003) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 05:36:34,129 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 05:37:24,014 [DEBUG] django.db.backends: (0.003) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 05:37:24,020 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 05:42:58,400 [DEBUG] django.db.backends: (0.002) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 05:42:58,406 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 05:45:12,664 [DEBUG] django.db.backends: (0.003) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 05:45:12,668 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 05:58:15,883 [DEBUG] django.db.backends: (0.000) SAVEPOINT "s140156594026240_x1"; args=None; alias=default
+2025-09-01 05:58:15,904 [DEBUG] django.db.backends: (0.009) SELECT 1 AS "a" FROM "user" WHERE "user"."username" = 'demo' LIMIT 1; args=(1, 'demo'); alias=default
+2025-09-01 05:58:15,907 [DEBUG] django.db.backends: (0.001) SELECT "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at" FROM "user" WHERE "user"."id" = 0 LIMIT 21; args=(0,); alias=default
+2025-09-01 05:58:15,911 [DEBUG] django.db.backends: (0.002) SELECT "auth_group"."id", "auth_group"."name" FROM "auth_group" WHERE "auth_group"."id" = 0 LIMIT 21; args=(0,); alias=default
+2025-09-01 05:58:15,914 [DEBUG] django.db.backends: (0.002) SELECT "auth_permission"."id", "auth_permission"."name", "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" WHERE "auth_permission"."id" = 0 LIMIT 21; args=(0,); alias=default
+2025-09-01 05:58:15,914 [DEBUG] django.db.backends: (0.000) ROLLBACK TO SAVEPOINT "s140156594026240_x1"; args=None; alias=default
+2025-09-01 05:59:47,944 [DEBUG] django.db.backends: (0.003) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 05:59:47,948 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 06:00:00,254 [DEBUG] django.db.backends: (0.005) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 06:00:00,263 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 06:08:41,392 [DEBUG] django.db.backends: (0.006) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 06:08:41,397 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 06:26:14,855 [DEBUG] django.db.backends: (0.002) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 06:26:14,859 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 06:27:06,793 [DEBUG] django.db.backends: (0.003) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 06:27:06,799 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 06:28:34,121 [DEBUG] django.db.backends: (0.005) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 06:28:34,127 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 06:29:41,369 [DEBUG] django.db.backends: (0.003) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 06:29:41,373 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 06:32:07,489 [DEBUG] django.db.backends: (0.002) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 06:32:07,495 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 06:33:10,765 [DEBUG] django.db.backends: (0.004) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 06:33:10,771 [DEBUG] django.db.backends: (0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 06:40:06,897 [DEBUG] django.db.backends: (0.000) SAVEPOINT "s140405836347136_x1"; args=None; alias=default
+2025-09-01 06:40:06,917 [DEBUG] django.db.backends: (0.003) SELECT 1 AS "a" FROM "user" WHERE "user"."username" = 'demo' LIMIT 1; args=(1, 'demo'); alias=default
+2025-09-01 06:40:06,921 [DEBUG] django.db.backends: (0.001) SELECT "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at" FROM "user" WHERE "user"."id" = 0 LIMIT 21; args=(0,); alias=default
+2025-09-01 06:40:06,924 [DEBUG] django.db.backends: (0.001) SELECT "auth_group"."id", "auth_group"."name" FROM "auth_group" WHERE "auth_group"."id" = 0 LIMIT 21; args=(0,); alias=default
+2025-09-01 06:40:06,926 [DEBUG] django.db.backends: (0.001) SELECT "auth_permission"."id", "auth_permission"."name", "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" WHERE "auth_permission"."id" = 0 LIMIT 21; args=(0,); alias=default
+2025-09-01 06:40:06,927 [DEBUG] django.db.backends: (0.000) ROLLBACK TO SAVEPOINT "s140405836347136_x1"; args=None; alias=default
+2025-09-01 06:48:00,389 [DEBUG] django.db.backends: (0.000) SAVEPOINT "s140405827954432_x1"; args=None; alias=default
+2025-09-01 06:48:00,395 [DEBUG] django.db.backends: (0.003) SELECT 1 AS "a" FROM "user" WHERE "user"."username" = 'demo' LIMIT 1; args=(1, 'demo'); alias=default
+2025-09-01 06:48:00,422 [DEBUG] django.db.backends: (0.025) INSERT INTO "user" ("password", "last_login", "is_superuser", "first_name", "last_name", "email", "mobile", "username", "is_staff", "is_active", "status", "created_by_id", "role", "login_otp", "login_otp_time", "otp", "otp_time", "new_otp", "created_at", "updated_at") VALUES ('demo@123', NULL, false, 'demo', 'test', 'demo@example.com', '8855665544', 'demo', true, true, 1, NULL, 1, NULL, NULL, NULL, NULL, NULL, '2025-09-01T06:48:00.397045+00:00'::timestamptz, '2025-09-01T06:48:00.397063+00:00'::timestamptz) RETURNING "user"."id"; args=('demo@123', None, False, 'demo', 'test', 'demo@example.com', '8855665544', 'demo', True, True, 1, None, 1, None, None, None, None, None, datetime.datetime(2025, 9, 1, 6, 48, 0, 397045, tzinfo=datetime.timezone.utc), datetime.datetime(2025, 9, 1, 6, 48, 0, 397063, tzinfo=datetime.timezone.utc)); alias=default
+2025-09-01 06:48:00,795 [DEBUG] django.db.backends: (0.012) UPDATE "user" SET "password" = 'pbkdf2_sha256$390000$wzq3UwdOY4Qe70AK5Vfwkg$pJoPncBP0mIs9jC8fWIB3KTH5G2nkFh/AWCHmodL2sw=', "last_login" = NULL, "is_superuser" = false, "first_name" = 'demo', "last_name" = 'test', "email" = 'demo@example.com', "mobile" = '8855665544', "username" = 'demo', "is_staff" = true, "is_active" = true, "status" = 1, "created_by_id" = NULL, "role" = 1, "login_otp" = NULL, "login_otp_time" = NULL, "otp" = NULL, "otp_time" = NULL, "new_otp" = NULL, "created_at" = '2025-09-01T06:48:00.397045+00:00'::timestamptz, "updated_at" = '2025-09-01T06:48:00.783076+00:00'::timestamptz WHERE "user"."id" = 8; args=('pbkdf2_sha256$390000$wzq3UwdOY4Qe70AK5Vfwkg$pJoPncBP0mIs9jC8fWIB3KTH5G2nkFh/AWCHmodL2sw=', False, 'demo', 'test', 'demo@example.com', '8855665544', 'demo', True, True, 1, 1, datetime.datetime(2025, 9, 1, 6, 48, 0, 397045, tzinfo=datetime.timezone.utc), datetime.datetime(2025, 9, 1, 6, 48, 0, 783076, tzinfo=datetime.timezone.utc), 8); alias=default
+2025-09-01 06:48:00,826 [DEBUG] django.db.backends: (0.000) RELEASE SAVEPOINT "s140405827954432_x1"; args=None; alias=default
+2025-09-01 06:48:00,831 [DEBUG] django.db.backends: (0.002) SELECT "auth_group"."id", "auth_group"."name" FROM "auth_group" INNER JOIN "user_groups" ON ("auth_group"."id" = "user_groups"."group_id") WHERE "user_groups"."user_id" = 8; args=(8,); alias=default
+2025-09-01 06:48:00,837 [DEBUG] django.db.backends: (0.004) SELECT "auth_permission"."id", "auth_permission"."name", "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "user_user_permissions" ON ("auth_permission"."id" = "user_user_permissions"."permission_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "user_user_permissions"."user_id" = 8 ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(8,); alias=default
+2025-09-01 07:02:48,811 [DEBUG] django.db.backends: (0.003) SELECT "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at" FROM "user" WHERE "user"."username" = 'demo' LIMIT 21; args=('demo',); alias=default
+2025-09-01 07:02:49,190 [DEBUG] django.db.backends: (0.025) SELECT "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_application" ORDER BY "oauth2_provider_application"."id" ASC LIMIT 1; args=(); alias=default
+2025-09-01 07:02:49,200 [DEBUG] django.db.backends: (0.007) INSERT INTO "oauth2_provider_accesstoken" ("user_id", "source_refresh_token_id", "token", "id_token_id", "application_id", "expires", "scope", "created", "updated") VALUES (8, NULL, 'VCDi9l1j8VR3gsqA8wYEZ6yHRfIln9', NULL, 1, '2025-09-01T17:02:49.190774+00:00'::timestamptz, '{''read'': ''Read scope''}', '2025-09-01T07:02:49.193983+00:00'::timestamptz, '2025-09-01T07:02:49.194021+00:00'::timestamptz) RETURNING "oauth2_provider_accesstoken"."id"; args=(8, None, 'VCDi9l1j8VR3gsqA8wYEZ6yHRfIln9', None, 1, datetime.datetime(2025, 9, 1, 17, 2, 49, 190774, tzinfo=backports.zoneinfo.ZoneInfo(key='UTC')), "{'read': 'Read scope'}", datetime.datetime(2025, 9, 1, 7, 2, 49, 193983, tzinfo=datetime.timezone.utc), datetime.datetime(2025, 9, 1, 7, 2, 49, 194021, tzinfo=datetime.timezone.utc)); alias=default
+2025-09-01 07:02:49,205 [DEBUG] django.db.backends: (0.004) INSERT INTO "oauth2_provider_refreshtoken" ("user_id", "token", "application_id", "access_token_id", "created", "updated", "revoked") VALUES (8, 'AMJxC05nqQGeZlRCM3Zfs8m5e6CN5z', 1, 7, '2025-09-01T07:02:49.201714+00:00'::timestamptz, '2025-09-01T07:02:49.201730+00:00'::timestamptz, NULL) RETURNING "oauth2_provider_refreshtoken"."id"; args=(8, 'AMJxC05nqQGeZlRCM3Zfs8m5e6CN5z', 1, 7, datetime.datetime(2025, 9, 1, 7, 2, 49, 201714, tzinfo=datetime.timezone.utc), datetime.datetime(2025, 9, 1, 7, 2, 49, 201730, tzinfo=datetime.timezone.utc), None); alias=default
+2025-09-01 07:09:04,877 [DEBUG] django.db.backends: (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'VCDi9l1j8VR3gsqA8wYEZ6yHRfIln9' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('VCDi9l1j8VR3gsqA8wYEZ6yHRfIln9',); alias=default
+2025-09-01 07:09:04,878 [DEBUG] django.db.backends: (0.000) SAVEPOINT "s140405836347136_x1"; args=None; alias=default
+2025-09-01 07:09:04,880 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-09-01 07:09:04,897 [DEBUG] django.db.backends: (0.016) INSERT INTO "product" ("name", "description", "price", "category_id", "stock", "created_at", "updated_at") VALUES ('Java', 'Java Core Concepts', 500.00, 2, 10, '2025-09-01T07:09:04.881374+00:00'::timestamptz, '2025-09-01T07:09:04.881402+00:00'::timestamptz) RETURNING "product"."id"; args=('Java', 'Java Core Concepts', Decimal('500.00'), 2, 10, datetime.datetime(2025, 9, 1, 7, 9, 4, 881374, tzinfo=datetime.timezone.utc), datetime.datetime(2025, 9, 1, 7, 9, 4, 881402, tzinfo=datetime.timezone.utc)); alias=default
+2025-09-01 07:09:04,898 [DEBUG] django.db.backends: (0.000) RELEASE SAVEPOINT "s140405836347136_x1"; args=None; alias=default
+2025-09-01 07:11:56,461 [DEBUG] django.db.backends: (0.003) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'VCDi9l1j8VR3gsqA8wYEZ6yHRfIln9' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('VCDi9l1j8VR3gsqA8wYEZ6yHRfIln9',); alias=default
+2025-09-01 07:11:56,463 [DEBUG] django.db.backends: (0.001) SELECT "product"."id", "product"."name", "product"."description", "product"."price", "product"."category_id", "product"."stock", "product"."created_at", "product"."updated_at" FROM "product"; args=(); alias=default
+2025-09-01 07:11:56,465 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 3 LIMIT 21; args=(3,); alias=default
+2025-09-01 07:11:56,467 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 1 LIMIT 21; args=(1,); alias=default
+2025-09-01 07:11:56,468 [DEBUG] django.db.backends: (0.000) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 3 LIMIT 21; args=(3,); alias=default
+2025-09-01 07:11:56,469 [DEBUG] django.db.backends: (0.000) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 1 LIMIT 21; args=(1,); alias=default
+2025-09-01 07:11:56,471 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 4 LIMIT 21; args=(4,); alias=default
+2025-09-01 07:11:56,473 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 1 LIMIT 21; args=(1,); alias=default
+2025-09-01 07:11:56,476 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-09-01 07:36:11,614 [DEBUG] django.db.backends: (0.004) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 07:36:11,618 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 07:38:31,564 [DEBUG] django.db.backends: (0.003) SELECT "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at" FROM "user" WHERE "user"."username" = 'demo' LIMIT 21; args=('demo',); alias=default
+2025-09-01 07:38:31,919 [DEBUG] django.db.backends: (0.002) SELECT "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_application" ORDER BY "oauth2_provider_application"."id" ASC LIMIT 1; args=(); alias=default
+2025-09-01 07:38:31,936 [DEBUG] django.db.backends: (0.014) INSERT INTO "oauth2_provider_accesstoken" ("user_id", "source_refresh_token_id", "token", "id_token_id", "application_id", "expires", "scope", "created", "updated") VALUES (8, NULL, 'pV7Upavx84MEstt0mLB0ZEAouQ6IgV', NULL, 1, '2025-09-01T17:38:31.920027+00:00'::timestamptz, '{''read'': ''Read scope''}', '2025-09-01T07:38:31.922027+00:00'::timestamptz, '2025-09-01T07:38:31.922042+00:00'::timestamptz) RETURNING "oauth2_provider_accesstoken"."id"; args=(8, None, 'pV7Upavx84MEstt0mLB0ZEAouQ6IgV', None, 1, datetime.datetime(2025, 9, 1, 17, 38, 31, 920027, tzinfo=backports.zoneinfo.ZoneInfo(key='UTC')), "{'read': 'Read scope'}", datetime.datetime(2025, 9, 1, 7, 38, 31, 922027, tzinfo=datetime.timezone.utc), datetime.datetime(2025, 9, 1, 7, 38, 31, 922042, tzinfo=datetime.timezone.utc)); alias=default
+2025-09-01 07:38:31,955 [DEBUG] django.db.backends: (0.018) INSERT INTO "oauth2_provider_refreshtoken" ("user_id", "token", "application_id", "access_token_id", "created", "updated", "revoked") VALUES (8, 'kO3aJAI2bxwL1n3jTGvSS4ttJvPs33', 1, 8, '2025-09-01T07:38:31.937320+00:00'::timestamptz, '2025-09-01T07:38:31.937338+00:00'::timestamptz, NULL) RETURNING "oauth2_provider_refreshtoken"."id"; args=(8, 'kO3aJAI2bxwL1n3jTGvSS4ttJvPs33', 1, 8, datetime.datetime(2025, 9, 1, 7, 38, 31, 937320, tzinfo=datetime.timezone.utc), datetime.datetime(2025, 9, 1, 7, 38, 31, 937338, tzinfo=datetime.timezone.utc), None); alias=default
+2025-09-01 07:39:10,094 [DEBUG] django.db.backends: (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'pV7Upavx84MEstt0mLB0ZEAouQ6IgV' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('pV7Upavx84MEstt0mLB0ZEAouQ6IgV',); alias=default
+2025-09-01 07:39:32,977 [DEBUG] django.db.backends: (0.014) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'pV7Upavx84MEstt0mLB0ZEAouQ6IgV' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('pV7Upavx84MEstt0mLB0ZEAouQ6IgV',); alias=default
+2025-09-01 07:41:09,829 [DEBUG] django.db.backends: (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'pV7Upavx84MEstt0mLB0ZEAouQ6IgV' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('pV7Upavx84MEstt0mLB0ZEAouQ6IgV',); alias=default
+2025-09-01 07:43:24,574 [DEBUG] django.db.backends: (0.003) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 07:43:24,578 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 07:43:32,286 [DEBUG] django.db.backends: (0.009) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'pV7Upavx84MEstt0mLB0ZEAouQ6IgV' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('pV7Upavx84MEstt0mLB0ZEAouQ6IgV',); alias=default
+2025-09-01 07:43:32,307 [DEBUG] django.db.backends: (0.017) SELECT "product"."id", "product"."name", "product"."description", "product"."price", "product"."category_id", "product"."stock", "product"."created_at", "product"."updated_at" FROM "product" WHERE (UPPER("product"."name"::text) LIKE UPPER('%Java%') OR UPPER("product"."description"::text) LIKE UPPER('%Java%')) ORDER BY "product"."id" ASC; args=('%Java%', '%Java%'); alias=default
+2025-09-01 07:43:32,308 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-09-01 07:43:50,877 [DEBUG] django.db.backends: (0.005) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'pV7Upavx84MEstt0mLB0ZEAouQ6IgV' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('pV7Upavx84MEstt0mLB0ZEAouQ6IgV',); alias=default
+2025-09-01 07:44:24,568 [DEBUG] django.db.backends: (0.005) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'pV7Upavx84MEstt0mLB0ZEAouQ6IgV' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('pV7Upavx84MEstt0mLB0ZEAouQ6IgV',); alias=default
+2025-09-01 08:12:35,131 [DEBUG] django.db.backends: (0.005) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'pV7Upavx84MEstt0mLB0ZEAouQ6IgV' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('pV7Upavx84MEstt0mLB0ZEAouQ6IgV',); alias=default
+2025-09-01 08:12:35,136 [DEBUG] django.db.backends: (0.002) SELECT "product"."id", "product"."name", "product"."description", "product"."price", "product"."category_id", "product"."stock", "product"."created_at", "product"."updated_at" FROM "product" WHERE "product"."price" >= 100 ORDER BY "product"."id" ASC; args=(Decimal('100'),); alias=default
+2025-09-01 08:12:35,139 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 1 LIMIT 21; args=(1,); alias=default
+2025-09-01 08:12:35,141 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 3 LIMIT 21; args=(3,); alias=default
+2025-09-01 08:12:35,143 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 3 LIMIT 21; args=(3,); alias=default
+2025-09-01 08:12:35,146 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 4 LIMIT 21; args=(4,); alias=default
+2025-09-01 08:12:35,147 [DEBUG] django.db.backends: (0.000) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 1 LIMIT 21; args=(1,); alias=default
+2025-09-01 08:12:35,149 [DEBUG] django.db.backends: (0.000) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-09-01 08:13:02,482 [DEBUG] django.db.backends: (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'pV7Upavx84MEstt0mLB0ZEAouQ6IgV' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('pV7Upavx84MEstt0mLB0ZEAouQ6IgV',); alias=default
+2025-09-01 08:13:02,486 [DEBUG] django.db.backends: (0.002) SELECT "product"."id", "product"."name", "product"."description", "product"."price", "product"."category_id", "product"."stock", "product"."created_at", "product"."updated_at" FROM "product" WHERE "product"."price" >= 100 ORDER BY "product"."id" DESC; args=(Decimal('100'),); alias=default
+2025-09-01 08:13:02,488 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-09-01 08:13:02,489 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 1 LIMIT 21; args=(1,); alias=default
+2025-09-01 08:13:02,492 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 4 LIMIT 21; args=(4,); alias=default
+2025-09-01 08:13:02,494 [DEBUG] django.db.backends: (0.000) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 3 LIMIT 21; args=(3,); alias=default
+2025-09-01 08:13:02,496 [DEBUG] django.db.backends: (0.000) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 3 LIMIT 21; args=(3,); alias=default
+2025-09-01 08:13:02,497 [DEBUG] django.db.backends: (0.000) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 1 LIMIT 21; args=(1,); alias=default
+2025-09-01 08:13:26,841 [DEBUG] django.db.backends: (0.006) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'pV7Upavx84MEstt0mLB0ZEAouQ6IgV' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('pV7Upavx84MEstt0mLB0ZEAouQ6IgV',); alias=default
+2025-09-01 08:13:26,847 [DEBUG] django.db.backends: (0.003) SELECT "product"."id", "product"."name", "product"."description", "product"."price", "product"."category_id", "product"."stock", "product"."created_at", "product"."updated_at" FROM "product" ORDER BY "product"."id" DESC; args=(); alias=default
+2025-09-01 08:13:26,858 [DEBUG] django.db.backends: (0.008) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-09-01 08:13:26,860 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 1 LIMIT 21; args=(1,); alias=default
+2025-09-01 08:13:26,863 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 4 LIMIT 21; args=(4,); alias=default
+2025-09-01 08:13:26,867 [DEBUG] django.db.backends: (0.002) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 3 LIMIT 21; args=(3,); alias=default
+2025-09-01 08:13:26,868 [DEBUG] django.db.backends: (0.000) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 3 LIMIT 21; args=(3,); alias=default
+2025-09-01 08:13:26,869 [DEBUG] django.db.backends: (0.000) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 1 LIMIT 21; args=(1,); alias=default
+2025-09-01 08:13:26,871 [DEBUG] django.db.backends: (0.000) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 1 LIMIT 21; args=(1,); alias=default
+2025-09-01 08:14:05,106 [DEBUG] django.db.backends: (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'pV7Upavx84MEstt0mLB0ZEAouQ6IgV' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('pV7Upavx84MEstt0mLB0ZEAouQ6IgV',); alias=default
+2025-09-01 08:14:05,114 [DEBUG] django.db.backends: (0.002) SELECT "product"."id", "product"."name", "product"."description", "product"."price", "product"."category_id", "product"."stock", "product"."created_at", "product"."updated_at" FROM "product" WHERE "product"."price" >= 100 ORDER BY "product"."price" DESC; args=(Decimal('100'),); alias=default
+2025-09-01 08:14:05,117 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 3 LIMIT 21; args=(3,); alias=default
+2025-09-01 08:14:05,121 [DEBUG] django.db.backends: (0.002) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 4 LIMIT 21; args=(4,); alias=default
+2025-09-01 08:14:05,125 [DEBUG] django.db.backends: (0.002) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 2 LIMIT 21; args=(2,); alias=default
+2025-09-01 08:14:05,127 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 1 LIMIT 21; args=(1,); alias=default
+2025-09-01 08:14:05,131 [DEBUG] django.db.backends: (0.003) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 3 LIMIT 21; args=(3,); alias=default
+2025-09-01 08:14:05,134 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 1 LIMIT 21; args=(1,); alias=default
+2025-09-01 08:15:41,821 [DEBUG] django.db.backends: (0.005) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'pV7Upavx84MEstt0mLB0ZEAouQ6IgV' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('pV7Upavx84MEstt0mLB0ZEAouQ6IgV',); alias=default
+2025-09-01 08:15:41,823 [DEBUG] django.db.backends: (0.001) SELECT "product"."id", "product"."name", "product"."description", "product"."price", "product"."category_id", "product"."stock", "product"."created_at", "product"."updated_at" FROM "product" WHERE "product"."id" = 7 LIMIT 21; args=(7,); alias=default
+2025-09-01 08:15:41,829 [DEBUG] django.db.backends: (0.005) DELETE FROM "order_item" WHERE "order_item"."product_id" IN (7); args=(7,); alias=default
+2025-09-01 08:15:41,831 [DEBUG] django.db.backends: (0.000) DELETE FROM "product" WHERE "product"."id" IN (7); args=(7,); alias=default
+2025-09-01 08:17:53,864 [DEBUG] django.db.backends: (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'pV7Upavx84MEstt0mLB0ZEAouQ6IgV' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('pV7Upavx84MEstt0mLB0ZEAouQ6IgV',); alias=default
+2025-09-01 08:17:53,868 [DEBUG] django.db.backends: (0.002) SAVEPOINT "s140071518934784_x1"; args=None; alias=default
+2025-09-01 08:17:53,870 [DEBUG] django.db.backends: (0.001) SELECT "product"."id", "product"."name", "product"."description", "product"."price", "product"."category_id", "product"."stock", "product"."created_at", "product"."updated_at" FROM "product" WHERE "product"."id" = 1 LIMIT 21; args=(1,); alias=default
+2025-09-01 08:17:53,873 [DEBUG] django.db.backends: (0.001) SELECT "categories"."id", "categories"."name", "categories"."description" FROM "categories" WHERE "categories"."id" = 1 LIMIT 21; args=(1,); alias=default
+2025-09-01 08:17:53,875 [DEBUG] django.db.backends: (0.001) UPDATE "product" SET "name" = 'Mobile', "description" = 'Latest Android version', "price" = 1000.00, "category_id" = 1, "stock" = 20, "created_at" = '2025-08-28T12:16:36.166262+00:00'::timestamptz, "updated_at" = '2025-09-01T08:17:53.873917+00:00'::timestamptz WHERE "product"."id" = 1; args=('Mobile', 'Latest Android version', Decimal('1000.00'), 1, 20, datetime.datetime(2025, 8, 28, 12, 16, 36, 166262, tzinfo=datetime.timezone.utc), datetime.datetime(2025, 9, 1, 8, 17, 53, 873917, tzinfo=datetime.timezone.utc), 1); alias=default
+2025-09-01 08:17:53,875 [DEBUG] django.db.backends: (0.000) RELEASE SAVEPOINT "s140071518934784_x1"; args=None; alias=default
+2025-09-01 08:27:22,538 [DEBUG] django.db.backends: (0.005) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'pV7Upavx84MEstt0mLB0ZEAouQ6IgV' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('pV7Upavx84MEstt0mLB0ZEAouQ6IgV',); alias=default
+2025-09-01 08:30:11,750 [DEBUG] django.db.backends: (0.005) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'pV7Upavx84MEstt0mLB0ZEAouQ6IgV' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('pV7Upavx84MEstt0mLB0ZEAouQ6IgV',); alias=default
+2025-09-01 08:30:11,752 [DEBUG] django.db.backends: (0.001) SELECT "product"."id", "product"."name", "product"."description", "product"."price", "product"."category_id", "product"."stock", "product"."created_at", "product"."updated_at" FROM "product" WHERE "product"."id" = 1 LIMIT 21; args=(1,); alias=default
+2025-09-01 08:30:11,755 [DEBUG] django.db.backends: (0.001) SELECT "product"."id", "product"."name", "product"."description", "product"."price", "product"."category_id", "product"."stock", "product"."created_at", "product"."updated_at" FROM "product" WHERE "product"."id" = 3 LIMIT 21; args=(3,); alias=default
+2025-09-01 08:30:11,756 [DEBUG] django.db.backends: (0.000) SELECT "product"."id", "product"."name", "product"."description", "product"."price", "product"."category_id", "product"."stock", "product"."created_at", "product"."updated_at" FROM "product" WHERE "product"."id" = 5 LIMIT 21; args=(5,); alias=default
+2025-09-01 08:30:11,759 [DEBUG] django.db.backends: (0.000) SELECT "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at" FROM "user" WHERE "user"."id" = 8 LIMIT 21; args=(8,); alias=default
+2025-09-01 08:30:11,790 [DEBUG] django.db.backends: (0.030) INSERT INTO "cart" ("user_id", "products", "added_at") VALUES (8, '[{"product_id": 1, "quantity": 2}, {"product_id": 3, "quantity": 2}, {"product_id": 5, "quantity": 2}]', '2025-09-01T08:30:11.760002+00:00'::timestamptz) RETURNING "cart"."id"; args=(8, '[{"product_id": 1, "quantity": 2}, {"product_id": 3, "quantity": 2}, {"product_id": 5, "quantity": 2}]', datetime.datetime(2025, 9, 1, 8, 30, 11, 760002, tzinfo=datetime.timezone.utc)); alias=default
+2025-09-01 08:32:17,047 [DEBUG] django.db.backends: (0.005) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'pV7Upavx84MEstt0mLB0ZEAouQ6IgV' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('pV7Upavx84MEstt0mLB0ZEAouQ6IgV',); alias=default
+2025-09-01 08:32:17,054 [DEBUG] django.db.backends: (0.004) SELECT 1 AS "a" FROM "cart" WHERE "cart"."user_id" = 8 LIMIT 1; args=(1, 8); alias=default
+2025-09-01 08:32:17,057 [DEBUG] django.db.backends: (0.002) SELECT "cart"."id", "cart"."user_id", "cart"."products", "cart"."added_at" FROM "cart" WHERE "cart"."user_id" = 8; args=(8,); alias=default
+2025-09-01 08:32:17,060 [DEBUG] django.db.backends: (0.001) SELECT "product"."id", "product"."name", "product"."description", "product"."price", "product"."category_id", "product"."stock", "product"."created_at", "product"."updated_at" FROM "product" WHERE "product"."id" = 1 LIMIT 21; args=(1,); alias=default
+2025-09-01 08:32:17,061 [DEBUG] django.db.backends: (0.000) SELECT "product"."id", "product"."name", "product"."description", "product"."price", "product"."category_id", "product"."stock", "product"."created_at", "product"."updated_at" FROM "product" WHERE "product"."id" = 3 LIMIT 21; args=(3,); alias=default
+2025-09-01 08:32:17,062 [DEBUG] django.db.backends: (0.000) SELECT "product"."id", "product"."name", "product"."description", "product"."price", "product"."category_id", "product"."stock", "product"."created_at", "product"."updated_at" FROM "product" WHERE "product"."id" = 5 LIMIT 21; args=(5,); alias=default
+2025-09-01 08:32:17,070 [DEBUG] django.db.backends: (0.006) INSERT INTO "order" ("user_id", "order_date", "status", "total_amount") VALUES (8, '2025-09-01T08:32:17.063579+00:00'::timestamptz, 'pending', 5599.98) RETURNING "order"."id"; args=(8, datetime.datetime(2025, 9, 1, 8, 32, 17, 63579, tzinfo=datetime.timezone.utc), 'pending', Decimal('5599.98')); alias=default
+2025-09-01 08:32:17,073 [DEBUG] django.db.backends: (0.003) INSERT INTO "order_item" ("order_id", "product_id", "quantity", "price") VALUES (7, 1, 2, 1000.00) RETURNING "order_item"."id"; args=(7, 1, 2, Decimal('1000.00')); alias=default
+2025-09-01 08:32:17,077 [DEBUG] django.db.backends: (0.002) UPDATE "product" SET "stock" = ("product"."stock" - 2) WHERE "product"."id" = 1; args=(2, 1); alias=default
+2025-09-01 08:32:17,079 [DEBUG] django.db.backends: (0.001) INSERT INTO "order_item" ("order_id", "product_id", "quantity", "price") VALUES (7, 3, 2, 299.99) RETURNING "order_item"."id"; args=(7, 3, 2, Decimal('299.99')); alias=default
+2025-09-01 08:32:17,081 [DEBUG] django.db.backends: (0.002) UPDATE "product" SET "stock" = ("product"."stock" - 2) WHERE "product"."id" = 3; args=(2, 3); alias=default
+2025-09-01 08:32:17,083 [DEBUG] django.db.backends: (0.001) INSERT INTO "order_item" ("order_id", "product_id", "quantity", "price") VALUES (7, 5, 2, 1500.00) RETURNING "order_item"."id"; args=(7, 5, 2, Decimal('1500.00')); alias=default
+2025-09-01 08:32:17,086 [DEBUG] django.db.backends: (0.002) UPDATE "product" SET "stock" = ("product"."stock" - 2) WHERE "product"."id" = 5; args=(2, 5); alias=default
+2025-09-01 08:32:17,087 [DEBUG] django.db.backends: (0.001) DELETE FROM "cart" WHERE "cart"."user_id" = 8; args=(8,); alias=default
+2025-09-01 08:43:08,247 [DEBUG] django.db.backends: (0.009) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'pV7Upavx84MEstt0mLB0ZEAouQ6IgV' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('pV7Upavx84MEstt0mLB0ZEAouQ6IgV',); alias=default
+2025-09-01 08:43:34,996 [DEBUG] django.db.backends: (0.003) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 08:43:35,000 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 08:44:46,046 [DEBUG] django.db.backends: (0.005) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 08:44:46,052 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 08:45:09,936 [DEBUG] django.db.backends: (0.005) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 08:45:09,942 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 08:45:40,869 [DEBUG] django.db.backends: (0.004) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 08:45:40,872 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 09:00:55,344 [DEBUG] django.db.backends: (0.005) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 09:00:55,348 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 09:01:02,130 [DEBUG] django.db.backends: (0.003) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 09:01:02,135 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 09:01:11,947 [DEBUG] django.db.backends: (0.011) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 09:01:11,951 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 09:02:57,979 [DEBUG] django.db.backends: (0.003) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 09:02:57,988 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 09:03:33,076 [DEBUG] django.db.backends: (0.000) SAVEPOINT "s140394914326272_x1"; args=None; alias=default
+2025-09-01 09:03:33,091 [DEBUG] django.db.backends: (0.002) SELECT 1 AS "a" FROM "user" WHERE "user"."username" = 'elon' LIMIT 1; args=(1, 'elon'); alias=default
+2025-09-01 09:03:33,095 [DEBUG] django.db.backends: (0.001) INSERT INTO "user" ("password", "last_login", "is_superuser", "first_name", "last_name", "email", "mobile", "username", "is_staff", "is_active", "status", "created_by_id", "role", "login_otp", "login_otp_time", "otp", "otp_time", "new_otp", "created_at", "updated_at") VALUES ('elon@123', NULL, false, 'Elon', 'musk', 'elon@example.com', '9876853210', 'elon', false, true, 1, NULL, 2, NULL, NULL, NULL, NULL, NULL, '2025-09-01T09:03:33.094351+00:00'::timestamptz, '2025-09-01T09:03:33.094394+00:00'::timestamptz) RETURNING "user"."id"; args=('elon@123', None, False, 'Elon', 'musk', 'elon@example.com', '9876853210', 'elon', False, True, 1, None, 2, None, None, None, None, None, datetime.datetime(2025, 9, 1, 9, 3, 33, 94351, tzinfo=datetime.timezone.utc), datetime.datetime(2025, 9, 1, 9, 3, 33, 94394, tzinfo=datetime.timezone.utc)); alias=default
+2025-09-01 09:03:33,513 [DEBUG] django.db.backends: (0.001) UPDATE "user" SET "password" = 'pbkdf2_sha256$390000$ba3JcbDI1hWF245TNVOi8w$lhO7Fk9ukyLZ6SRlnF4Yi+c/nHXZ0E3VRdle8VocGmU=', "last_login" = NULL, "is_superuser" = false, "first_name" = 'Elon', "last_name" = 'musk', "email" = 'elon@example.com', "mobile" = '9876853210', "username" = 'elon', "is_staff" = false, "is_active" = true, "status" = 1, "created_by_id" = NULL, "role" = 2, "login_otp" = NULL, "login_otp_time" = NULL, "otp" = NULL, "otp_time" = NULL, "new_otp" = NULL, "created_at" = '2025-09-01T09:03:33.094351+00:00'::timestamptz, "updated_at" = '2025-09-01T09:03:33.511547+00:00'::timestamptz WHERE "user"."id" = 9; args=('pbkdf2_sha256$390000$ba3JcbDI1hWF245TNVOi8w$lhO7Fk9ukyLZ6SRlnF4Yi+c/nHXZ0E3VRdle8VocGmU=', False, 'Elon', 'musk', 'elon@example.com', '9876853210', 'elon', False, True, 1, 2, datetime.datetime(2025, 9, 1, 9, 3, 33, 94351, tzinfo=datetime.timezone.utc), datetime.datetime(2025, 9, 1, 9, 3, 33, 511547, tzinfo=datetime.timezone.utc), 9); alias=default
+2025-09-01 09:03:33,539 [DEBUG] django.db.backends: (0.000) RELEASE SAVEPOINT "s140394914326272_x1"; args=None; alias=default
+2025-09-01 09:03:33,544 [DEBUG] django.db.backends: (0.001) SELECT "auth_group"."id", "auth_group"."name" FROM "auth_group" INNER JOIN "user_groups" ON ("auth_group"."id" = "user_groups"."group_id") WHERE "user_groups"."user_id" = 9; args=(9,); alias=default
+2025-09-01 09:03:33,551 [DEBUG] django.db.backends: (0.002) SELECT "auth_permission"."id", "auth_permission"."name", "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "user_user_permissions" ON ("auth_permission"."id" = "user_user_permissions"."permission_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "user_user_permissions"."user_id" = 9 ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(9,); alias=default
+2025-09-01 09:06:16,570 [DEBUG] django.db.backends: (0.003) SELECT "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at" FROM "user" WHERE "user"."username" = 'elon' LIMIT 21; args=('elon',); alias=default
+2025-09-01 09:06:16,936 [DEBUG] django.db.backends: (0.001) SELECT "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_application" ORDER BY "oauth2_provider_application"."id" ASC LIMIT 1; args=(); alias=default
+2025-09-01 09:06:16,946 [DEBUG] django.db.backends: (0.008) INSERT INTO "oauth2_provider_accesstoken" ("user_id", "source_refresh_token_id", "token", "id_token_id", "application_id", "expires", "scope", "created", "updated") VALUES (9, NULL, 'IT9VQIQoJQaJVpBe5ZjYXe7hLDTdPc', NULL, 1, '2025-09-01T19:06:16.936610+00:00'::timestamptz, '{''read'': ''Read scope''}', '2025-09-01T09:06:16.938095+00:00'::timestamptz, '2025-09-01T09:06:16.938111+00:00'::timestamptz) RETURNING "oauth2_provider_accesstoken"."id"; args=(9, None, 'IT9VQIQoJQaJVpBe5ZjYXe7hLDTdPc', None, 1, datetime.datetime(2025, 9, 1, 19, 6, 16, 936610, tzinfo=backports.zoneinfo.ZoneInfo(key='UTC')), "{'read': 'Read scope'}", datetime.datetime(2025, 9, 1, 9, 6, 16, 938095, tzinfo=datetime.timezone.utc), datetime.datetime(2025, 9, 1, 9, 6, 16, 938111, tzinfo=datetime.timezone.utc)); alias=default
+2025-09-01 09:06:16,960 [DEBUG] django.db.backends: (0.013) INSERT INTO "oauth2_provider_refreshtoken" ("user_id", "token", "application_id", "access_token_id", "created", "updated", "revoked") VALUES (9, 'Ieiu9Nwd6XQ3NLN74KPOc8rQBltSQ2', 1, 9, '2025-09-01T09:06:16.947212+00:00'::timestamptz, '2025-09-01T09:06:16.947231+00:00'::timestamptz, NULL) RETURNING "oauth2_provider_refreshtoken"."id"; args=(9, 'Ieiu9Nwd6XQ3NLN74KPOc8rQBltSQ2', 1, 9, datetime.datetime(2025, 9, 1, 9, 6, 16, 947212, tzinfo=datetime.timezone.utc), datetime.datetime(2025, 9, 1, 9, 6, 16, 947231, tzinfo=datetime.timezone.utc), None); alias=default
+2025-09-01 09:06:44,271 [DEBUG] django.db.backends: (0.005) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'IT9VQIQoJQaJVpBe5ZjYXe7hLDTdPc' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('IT9VQIQoJQaJVpBe5ZjYXe7hLDTdPc',); alias=default
+2025-09-01 09:06:44,273 [DEBUG] django.db.backends: (0.000) SAVEPOINT "s140394914326272_x2"; args=None; alias=default
+2025-09-01 09:06:44,279 [DEBUG] django.db.backends: (0.001) UPDATE "user" SET "password" = 'pbkdf2_sha256$390000$ba3JcbDI1hWF245TNVOi8w$lhO7Fk9ukyLZ6SRlnF4Yi+c/nHXZ0E3VRdle8VocGmU=', "last_login" = NULL, "is_superuser" = false, "first_name" = 'Elon', "last_name" = 'musk', "email" = 'elon@example.com', "mobile" = '8888888888', "username" = 'elon', "is_staff" = false, "is_active" = true, "status" = 1, "created_by_id" = NULL, "role" = 2, "login_otp" = NULL, "login_otp_time" = NULL, "otp" = NULL, "otp_time" = NULL, "new_otp" = NULL, "created_at" = '2025-09-01T09:03:33.094351+00:00'::timestamptz, "updated_at" = '2025-09-01T09:06:44.278311+00:00'::timestamptz WHERE "user"."id" = 9; args=('pbkdf2_sha256$390000$ba3JcbDI1hWF245TNVOi8w$lhO7Fk9ukyLZ6SRlnF4Yi+c/nHXZ0E3VRdle8VocGmU=', False, 'Elon', 'musk', 'elon@example.com', '8888888888', 'elon', False, True, 1, 2, datetime.datetime(2025, 9, 1, 9, 3, 33, 94351, tzinfo=datetime.timezone.utc), datetime.datetime(2025, 9, 1, 9, 6, 44, 278311, tzinfo=datetime.timezone.utc), 9); alias=default
+2025-09-01 09:06:44,280 [DEBUG] django.db.backends: (0.000) RELEASE SAVEPOINT "s140394914326272_x2"; args=None; alias=default
+2025-09-01 09:06:44,282 [DEBUG] django.db.backends: (0.001) SELECT "auth_group"."id", "auth_group"."name" FROM "auth_group" INNER JOIN "user_groups" ON ("auth_group"."id" = "user_groups"."group_id") WHERE "user_groups"."user_id" = 9; args=(9,); alias=default
+2025-09-01 09:06:44,284 [DEBUG] django.db.backends: (0.001) SELECT "auth_permission"."id", "auth_permission"."name", "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "user_user_permissions" ON ("auth_permission"."id" = "user_user_permissions"."permission_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "user_user_permissions"."user_id" = 9 ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(9,); alias=default
+2025-09-01 09:07:05,743 [DEBUG] django.db.backends: (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'IT9VQIQoJQaJVpBe5ZjYXe7hLDTdPc' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('IT9VQIQoJQaJVpBe5ZjYXe7hLDTdPc',); alias=default
+2025-09-01 09:07:41,776 [DEBUG] django.db.backends: (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."source_refresh_token_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."id_token_id", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "oauth2_provider_accesstoken"."created", "oauth2_provider_accesstoken"."updated", "user"."id", "user"."password", "user"."last_login", "user"."is_superuser", "user"."first_name", "user"."last_name", "user"."email", "user"."mobile", "user"."username", "user"."is_staff", "user"."is_active", "user"."status", "user"."created_by_id", "user"."role", "user"."login_otp", "user"."login_otp_time", "user"."otp", "user"."otp_time", "user"."new_otp", "user"."created_at", "user"."updated_at", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization", "oauth2_provider_application"."created", "oauth2_provider_application"."updated", "oauth2_provider_application"."algorithm" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "user" ON ("oauth2_provider_accesstoken"."user_id" = "user"."id") LEFT OUTER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'IT9VQIQoJQaJVpBe5ZjYXe7hLDTdPc' ORDER BY "oauth2_provider_accesstoken"."id" ASC LIMIT 1; args=('IT9VQIQoJQaJVpBe5ZjYXe7hLDTdPc',); alias=default
+2025-09-01 09:07:41,778 [DEBUG] django.db.backends: (0.001) SELECT "oauth2_provider_application"."id" FROM "oauth2_provider_application" WHERE "oauth2_provider_application"."user_id" IN (9); args=(9,); alias=default
+2025-09-01 09:07:41,780 [DEBUG] django.db.backends: (0.000) SELECT "oauth2_provider_accesstoken"."id" FROM "oauth2_provider_accesstoken" WHERE "oauth2_provider_accesstoken"."user_id" IN (9); args=(9,); alias=default
+2025-09-01 09:07:41,782 [DEBUG] django.db.backends: (0.001) SELECT "oauth2_provider_refreshtoken"."id" FROM "oauth2_provider_refreshtoken" WHERE "oauth2_provider_refreshtoken"."access_token_id" IN (9); args=(9,); alias=default
+2025-09-01 09:07:41,784 [DEBUG] django.db.backends: (0.000) SELECT "oauth2_provider_refreshtoken"."id" FROM "oauth2_provider_refreshtoken" WHERE "oauth2_provider_refreshtoken"."user_id" IN (9); args=(9,); alias=default
+2025-09-01 09:07:41,785 [DEBUG] django.db.backends: (0.000) SELECT "oauth2_provider_accesstoken"."id" FROM "oauth2_provider_accesstoken" WHERE "oauth2_provider_accesstoken"."source_refresh_token_id" IN (9); args=(9,); alias=default
+2025-09-01 09:07:41,789 [DEBUG] django.db.backends: (0.003) SELECT "oauth2_provider_idtoken"."id" FROM "oauth2_provider_idtoken" WHERE "oauth2_provider_idtoken"."user_id" IN (9); args=(9,); alias=default
+2025-09-01 09:07:41,792 [DEBUG] django.db.backends: (0.001) SELECT "user"."id" FROM "user" WHERE "user"."created_by_id" IN (9); args=(9,); alias=default
+2025-09-01 09:07:41,795 [DEBUG] django.db.backends: (0.001) SELECT "order"."id" FROM "order" WHERE "order"."user_id" IN (9); args=(9,); alias=default
+2025-09-01 09:07:41,798 [DEBUG] django.db.backends: (0.002) DELETE FROM "django_admin_log" WHERE "django_admin_log"."user_id" IN (9); args=(9,); alias=default
+2025-09-01 09:07:41,801 [DEBUG] django.db.backends: (0.002) DELETE FROM "oauth2_provider_grant" WHERE "oauth2_provider_grant"."user_id" IN (9); args=(9,); alias=default
+2025-09-01 09:07:41,802 [DEBUG] django.db.backends: (0.000) DELETE FROM "user_groups" WHERE "user_groups"."user_id" IN (9); args=(9,); alias=default
+2025-09-01 09:07:41,803 [DEBUG] django.db.backends: (0.000) DELETE FROM "user_user_permissions" WHERE "user_user_permissions"."user_id" IN (9); args=(9,); alias=default
+2025-09-01 09:07:41,804 [DEBUG] django.db.backends: (0.001) DELETE FROM "cart" WHERE "cart"."user_id" IN (9); args=(9,); alias=default
+2025-09-01 09:07:41,806 [DEBUG] django.db.backends: (0.001) UPDATE "oauth2_provider_refreshtoken" SET "access_token_id" = NULL WHERE "oauth2_provider_refreshtoken"."id" IN (9); args=(9,); alias=default
+2025-09-01 09:07:41,808 [DEBUG] django.db.backends: (0.001) DELETE FROM "oauth2_provider_accesstoken" WHERE "oauth2_provider_accesstoken"."id" IN (9); args=(9,); alias=default
+2025-09-01 09:07:41,809 [DEBUG] django.db.backends: (0.000) DELETE FROM "oauth2_provider_refreshtoken" WHERE "oauth2_provider_refreshtoken"."id" IN (9); args=(9,); alias=default
+2025-09-01 09:07:41,810 [DEBUG] django.db.backends: (0.001) DELETE FROM "user" WHERE "user"."id" IN (9); args=(9,); alias=default
+2025-09-01 09:09:19,591 [DEBUG] django.db.backends: (0.004) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 09:09:19,595 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 09:09:22,370 [DEBUG] django.db.backends: (0.005) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 09:09:22,386 [DEBUG] django.db.backends: (0.009) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 09:09:25,538 [DEBUG] django.db.backends: (0.003) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 09:09:25,547 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 09:10:08,451 [DEBUG] django.db.backends: (0.012) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 09:10:08,465 [DEBUG] django.db.backends: (0.004) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 09:10:18,685 [DEBUG] django.db.backends: (0.006) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 09:10:18,696 [DEBUG] django.db.backends: (0.007) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 09:10:57,585 [DEBUG] django.db.backends: (0.002) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 09:10:57,588 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 09:11:31,808 [DEBUG] django.db.backends: (0.004) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 09:11:31,813 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 09:11:49,305 [DEBUG] django.db.backends: (0.002) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 09:11:49,308 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+2025-09-01 09:16:47,258 [DEBUG] django.db.backends: (0.005) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+2025-09-01 09:16:47,263 [DEBUG] django.db.backends: (0.001) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default

@@ -7,3 +7,28 @@
 2025-08-29 11:08:16,720 [ERROR] django.request: Internal Server Error: /api/v1/createorder/
 2025-08-29 11:08:47,001 [ERROR] django.request: Internal Server Error: /api/v1/createorder/
 2025-08-29 11:09:40,349 [ERROR] django.request: Internal Server Error: /api/v1/createorder/
+2025-09-01 05:09:47,352 [WARNING] django.request: Not Found: /
+2025-09-01 05:09:47,472 [WARNING] django.request: Not Found: /favicon.ico
+2025-09-01 05:09:52,530 [WARNING] django.request: Not Found: //api/v1/swagger/
+2025-09-01 05:09:52,588 [WARNING] django.request: Not Found: /favicon.ico
+2025-09-01 05:09:59,281 [WARNING] django.request: Not Found: //api/v1/swagger/
+2025-09-01 05:10:22,164 [WARNING] django.request: Not Found: //api/v1/swagger/
+2025-09-01 05:10:22,235 [WARNING] django.request: Not Found: /favicon.ico
+2025-09-01 05:16:51,938 [WARNING] django.request: Not Found: /172.17.0.1/api/v1/swagger/
+2025-09-01 05:16:59,630 [WARNING] django.request: Not Found: /172.17.0.1:8000/api/v1/swagger/
+2025-09-01 05:17:22,133 [WARNING] django.request: Not Found: /
+2025-09-01 05:50:38,048 [ERROR] django.request: Internal Server Error: /api/v1/list/
+2025-09-01 05:53:57,652 [WARNING] django.request: Unauthorized: /api/v1/listcart/
+2025-09-01 05:58:15,915 [WARNING] django.request: Bad Request: /api/v1/register/
+2025-09-01 06:40:06,929 [WARNING] django.request: Bad Request: /api/v1/register/
+2025-09-01 07:02:06,341 [WARNING] django.request: Bad Request: /api/v1/login/
+2025-09-01 07:37:43,895 [WARNING] django.request: Unauthorized: /api/v1/listproduct/
+2025-09-01 07:39:10,096 [ERROR] django.request: Internal Server Error: /api/v1/listproduct/
+2025-09-01 07:39:32,982 [ERROR] django.request: Internal Server Error: /api/v1/listproduct/
+2025-09-01 07:41:09,832 [ERROR] django.request: Internal Server Error: /api/v1/listproduct/
+2025-09-01 07:43:50,878 [ERROR] django.request: Internal Server Error: /api/v1/listproduct/
+2025-09-01 07:44:24,570 [ERROR] django.request: Internal Server Error: /api/v1/listproduct/
+2025-09-01 08:27:22,539 [ERROR] django.request: Internal Server Error: /api/v1/addtocart/
+2025-09-01 08:59:14,959 [WARNING] django.request: Unauthorized: /api/v1/register/
+2025-09-01 09:05:53,393 [WARNING] django.request: Unauthorized: /api/v1/update/9/
+2025-09-01 09:07:05,744 [WARNING] django.request: Bad Request: /api/v1/student/

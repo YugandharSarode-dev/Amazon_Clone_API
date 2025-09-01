@@ -36,7 +36,8 @@ CC = []
 S_KEY = b"ImmOpwdpqo5ALKyjzTOKkJeHihu0i9U4qN3XP2yx_jg="
 
 FRONT_END_URL = "http://127.0.0.1:8000/"
-BASE_URL = "http://127.0.0.1:8000/api/v1/"
+BASE_URL = "http://0.0.0.0:8000/api/v1/"
+
 
 TEMPLATES = [
     {
