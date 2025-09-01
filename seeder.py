@@ -13,6 +13,7 @@ try:
         mobile="9878755878",
         is_staff=True,
         is_active=True,
+        role = 1
     )
 
     instace.set_password("123456")

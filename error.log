@@ -32,3 +32,7 @@
 2025-09-01 08:59:14,959 [WARNING] django.request: Unauthorized: /api/v1/register/
 2025-09-01 09:05:53,393 [WARNING] django.request: Unauthorized: /api/v1/update/9/
 2025-09-01 09:07:05,744 [WARNING] django.request: Bad Request: /api/v1/student/
+2025-09-01 10:35:49,449 [WARNING] django.request: Forbidden: /api/v1/login/
+2025-09-01 10:38:06,925 [WARNING] django.request: Forbidden: /api/v1/registercat/
+2025-09-01 10:41:46,776 [WARNING] django.request: Forbidden: /api/v1/registercat/
+2025-09-01 10:50:43,896 [WARNING] django.request: Forbidden: /api/v1/registercat/

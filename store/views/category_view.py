@@ -1,8 +1,10 @@
 from django.db import transaction
 from oauth2_provider.contrib.rest_framework import OAuth2Authentication
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import AllowAny
 from utility.response import ApiResponse
 from utility.utils import MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, get_serielizer_error
+from utility.role import is_superuser
 from store.model.category_model import Categories
 from store.serializers.category_serializer import CategorySerializer
 
@@ -13,10 +15,21 @@ class CategoryView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRe
     serializer_class = CategorySerializer
     singular_name = 'Category'
     model_class = Categories.objects
-    # authentication_classes = [OAuth2Authentication]
-    # permission_classes = [IsAuthenticated]
+    authentication_classes = [OAuth2Authentication]
+    permission_classes = [IsAuthenticated]
 
     search_fields = ['name', 'description']
+
+    def get_permissions(self):
+        # Allow anyone to retrieve or list categories, only superusr for create/update/delete
+        if self.action in ['create', 'update', 'delete']:
+            return [IsAuthenticated()]
+        return super().get_permissions()
+
+    def _check_permission(self, user):
+        print("User:", user.username, "Role:", getattr(user, 'role', None))
+        print("is_superuser():", is_superuser(user))
+        return is_superuser(user)
 
     def get_object(self):
         try:
@@ -28,6 +41,10 @@ class CategoryView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRe
     @swagger_auto_schema_post
     @transaction.atomic()
     def create(self, request, *args, **kwargs):
+        print("Logged-in user:", request.user.username, request.user.role, request.user.is_superuser)
+        if not self._check_permission(request.user):
+            return ApiResponse.response_unauthorized(self, message='Only superusers can create categories.')
+
         sp1 = transaction.savepoint()
         try:
             req_data = request.data.copy()
@@ -52,6 +69,9 @@ class CategoryView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRe
     @swagger_auto_schema_update
     @transaction.atomic()
     def update(self, request, *args, **kwargs):
+        if not self._check_permission(request.user):
+            return ApiResponse.response_unauthorized(self, message='Only superusers can update categories.')
+
         sp1 = transaction.savepoint()
         try:
             instance = self.get_object()
@@ -100,7 +120,11 @@ class CategoryView(MultipleFieldPKModelMixin, CreateRetrieveUpdateViewSet, ApiRe
             return ApiResponse.response_internal_server_error(self, message=[str(e)])
 
     @swagger_auto_schema_delete
+    @transaction.atomic()
     def delete(self, request, *args, **kwargs):
+        if not self._check_permission(request.user):
+            return ApiResponse.response_unauthorized(self, message='Only superusers can delete categories.')
+
         try:
             instance = self.get_object()
             if not instance:
